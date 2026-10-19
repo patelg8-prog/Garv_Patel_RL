@@ -1,0 +1,5 @@
+Agent,Wins,Matches,Win Rate (%),Average Position,Average Reward
+DQN0,5,10,50.0,1.9,1.48
+DQN1,2,10,20.0,2.7,0.576
+DQN2,1,10,10.0,2.9,0.278
+DQN3,2,10,20.0,2.5,0.576

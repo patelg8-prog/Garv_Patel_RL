@@ -1,0 +1,333 @@
+
+============================================================
+CHEFMIND-RL
+Delayed Reward Reinforcement Learning for Chef's Hat
+============================================================
+
+EXPERIMENT DATE
+---------------
+2026-10-06 11:49:24
+
+============================================================
+ENVIRONMENT
+============================================================
+
+Environment:
+Official Chef's Hat Gym environment
+
+Variant:
+Sparse / Delayed Reward Variant
+
+Algorithm:
+Dueling Deep Q-Network (DQN)
+
+Number of agents:
+4
+
+Training matches per experiment:
+100
+
+Evaluation matches per experiment:
+100
+
+Training batch size:
+64
+
+Replay memory size:
+10000
+
+Discount factor (gamma):
+0.99
+
+Initial epsilon:
+1.0
+
+Minimum epsilon:
+0.05
+
+
+============================================================
+TRAINING VERIFICATION
+============================================================
+
+Baseline DQN:
+
+BaselineDQN0:
+97 training updates
+
+BaselineDQN1:
+98 training updates
+
+BaselineDQN2:
+98 training updates
+
+BaselineDQN3:
+97 training updates
+
+Total baseline training updates:
+390
+
+
+ChefMind Shaped DQN:
+
+ChefMindDQN0:
+98 training updates
+
+ChefMindDQN1:
+97 training updates
+
+ChefMindDQN2:
+97 training updates
+
+ChefMindDQN3:
+98 training updates
+
+Total shaped training updates:
+390
+
+Conclusion:
+Actual DQN replay training was confirmed.
+
+
+============================================================
+GREEDY EVALUATION
+============================================================
+
+Evaluation used:
+epsilon = 0
+
+Therefore, the trained agents were evaluated using
+greedy action selection without exploration.
+
+
+============================================================
+OVERALL RESULTS
+============================================================
+
+Metric                         Baseline       Shaped
+
+Win Rate                       25.0%          25.0%
+
+Average Finishing Position    2.50           2.50
+
+Average Reward                 0.735          0.735
+
+
+============================================================
+OVERALL PERFORMANCE CHANGE
+============================================================
+
+Win-rate change:
++0.00 percentage points
+
+Average-position change:
++0.000
+
+Average-reward change:
+approximately 0
+
+
+============================================================
+PER-AGENT RESULTS
+============================================================
+
+Agent 0:
+
+Baseline:
+Win rate = 20.0%
+Average position = 2.49
+Average reward = 0.5840
+
+Shaped:
+Win rate = 24.0%
+Average position = 2.51
+Average reward = 0.7048
+
+Win-rate change:
++4 percentage points
+
+
+------------------------------------------------------------
+
+Agent 1:
+
+Baseline:
+Win rate = 23.0%
+Average position = 2.74
+Average reward = 0.6746
+
+Shaped:
+Win rate = 17.0%
+Average position = 2.84
+Average reward = 0.4934
+
+Win-rate change:
+-6 percentage points
+
+
+------------------------------------------------------------
+
+Agent 2:
+
+Baseline:
+Win rate = 24.0%
+Average position = 2.59
+Average reward = 0.7048
+
+Shaped:
+Win rate = 37.0%
+Average position = 2.05
+Average reward = 1.0974
+
+Win-rate change:
++13 percentage points
+
+
+------------------------------------------------------------
+
+Agent 3:
+
+Baseline:
+Win rate = 33.0%
+Average position = 2.18
+Average reward = 0.9766
+
+Shaped:
+Win rate = 22.0%
+Average position = 2.60
+Average reward = 0.6444
+
+Win-rate change:
+-11 percentage points
+
+
+============================================================
+BEST AGENTS
+============================================================
+
+Best baseline agent:
+Agent 3
+
+Baseline win rate:
+33.0%
+
+Baseline average position:
+2.18
+
+
+Best shaped agent:
+Agent 2
+
+Shaped win rate:
+37.0%
+
+Shaped average position:
+2.05
+
+
+============================================================
+TRAINING VARIABILITY
+============================================================
+
+Baseline win-rate standard deviation:
+4.85 percentage points
+
+ChefMind shaped win-rate standard deviation:
+7.38 percentage points
+
+Interpretation:
+The shaped agents showed greater variation in individual
+win rates than the baseline agents.
+
+
+============================================================
+MODEL WEIGHT DIFFERENCE
+============================================================
+
+Agent 0:
+0.62626535
+
+Agent 1:
+0.61444139
+
+Agent 2:
+0.61000782
+
+Agent 3:
+0.61024439
+
+Interpretation:
+The trained baseline and shaped networks developed
+different parameter values.
+
+
+============================================================
+FINAL CONCLUSION
+============================================================
+
+Reward shaping produced no measurable overall performance
+improvement over the baseline DQN under the tested
+experimental configuration.
+
+Both approaches achieved:
+
+25.0% average win rate,
+2.50 average finishing position,
+and 0.735 average reward.
+
+However, reward shaping affected individual agents
+differently.
+
+Agent 2 improved substantially under reward shaping,
+increasing its win rate from 24% to 37% and improving
+its average finishing position from 2.59 to 2.05.
+
+Other agents showed either smaller improvements or
+performance decreases.
+
+Therefore, the experiment suggests that reward shaping
+changed learning behaviour but did not provide a
+consistent aggregate advantage in this experiment.
+
+
+============================================================
+LIMITATIONS
+============================================================
+
+1. Only 100 training matches were used per experiment.
+
+2. The Chef's Hat environment is stochastic, so different
+   runs may produce different outcomes.
+
+3. Individual agents showed noticeable performance
+   variability.
+
+4. Reward shaping did not consistently improve every agent.
+
+5. The experiment compared one baseline DQN configuration
+   against one reward-shaping configuration.
+
+6. A larger training budget and multiple independent seeds
+   could provide stronger evidence about the effect of
+   reward shaping.
+
+
+============================================================
+REPRODUCIBILITY
+============================================================
+
+The project uses the official Chef's Hat environment.
+
+The implementation compares:
+
+1. Official Dueling DQN baseline
+
+2. ChefMind DQN with potential-based reward shaping
+
+Training and evaluation results are saved in the
+ChefMind_Final directory.
+
+
+============================================================
+END OF REPORT
+============================================================

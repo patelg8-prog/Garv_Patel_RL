@@ -1,0 +1,3 @@
+Experiment,Average Win Rate (%),Average Position,Average Reward
+Baseline DQN,25.0,2.5,0.7275
+ChefMind Shaped DQN,25.0,2.5,0.735

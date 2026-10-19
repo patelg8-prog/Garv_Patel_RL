@@ -1,0 +1,5 @@
+Agent,Wins,Matches,Win Rate (%),Average Position,Average Reward
+ShapedDQN0,4,10,40.0,2.2,1.1880000000000002
+ShapedDQN1,5,10,50.0,1.9,1.49
+ShapedDQN2,0,10,0.0,2.8,-0.019999999999999997
+ShapedDQN3,1,10,10.0,3.1,0.282
